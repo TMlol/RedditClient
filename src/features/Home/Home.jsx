@@ -18,8 +18,10 @@ const Home = () => {
   const posts = useSelector(selectFilteredPosts);
   const dispatch = useDispatch();
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     dispatch(fetchPosts(selectedSubreddit));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedSubreddit]);
 
   const onToggleComments = (index) => {
